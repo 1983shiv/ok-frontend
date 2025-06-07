@@ -1,16 +1,27 @@
+
+import { ThemeProvider } from '@/context/ThemeContext';
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import ReduxProvider from './ReduxProvider';
+
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { Inter } from 'next/font/google'
+import { Roboto_Mono } from 'next/font/google'
+
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const robotoMono = Roboto_Mono({
+  subsets: ['latin'],
+  variable: '--font-roboto-mono',
+  display: 'swap',
+})
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,11 +34,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${robotoMono.variable} antialiased`}
       >
-        {children}
+        <ReduxProvider>
+          <ThemeProvider>
+            
+            {children}
+          </ThemeProvider>
+        </ReduxProvider>
       </body>
     </html>
   );
