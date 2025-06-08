@@ -15,8 +15,7 @@ const Navbar: React.FC = () => {
         { title: 'Long vs. Short', href: '/futures/long-vs-short' },
         { title: 'Price vs. OI', href: '/futures/price-vs-oi' },
       ],
-    },
-    {
+    },    {
       title: 'Options',
       items: [
         { title: 'Oi Analysis', href: '/options/oi-analysis' },
@@ -26,6 +25,7 @@ const Navbar: React.FC = () => {
         { title: 'ATM Premium', href: '/options/atm-premium-analysis' },
         { title: 'Implied Volatility', href: '/options/implied-volatility' },
         { title: 'Multi-Strike OI', href: '/options/multi-strike-oi' },
+        { title: 'OI Gainer/Looser', href: '/options/oi-gainer-looser' },
         { title: 'OI Internal Value', href: '/options/oi-internal-value' },
         { title: 'Premium Decay', href: '/options/premium-decay' },
         { title: 'Long & Short', href: '/options/long-and-short' },

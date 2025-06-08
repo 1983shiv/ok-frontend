@@ -10,6 +10,7 @@ import atmPremiumAnalysisData from "@/data/atmPremiumAnalysisData.json";
 import straddleAnalysisData from "@/data/straddleAnalysisData.json";
 import multiStrikeStraddleData from "@/data/multiStrikeStraddleData.json";
 import multiStrikeOIData from "@/data/multiStrikeOIData.json";
+import oiGainerLooserData from "@/data/oiGainerLooserData.json";
 
 
 interface FilterState {
@@ -32,6 +33,7 @@ interface ChartState {
   straddleAnalysisFilters: StraddleAnalysisState;
   multiStrikeStraddleFilters: MultiStrikeStraddleState;
   multiStrikeOIFilters: MultiStrikeOIState;
+  oiGainerLooserFilters: OIGainerLooserState;
   chartData: typeof chartData;
   premiumDecayData: typeof premiumDecayData;
   coiAnalysisData: typeof coiAnalysisData;
@@ -41,6 +43,7 @@ interface ChartState {
   straddleAnalysisData: typeof straddleAnalysisData;
   multiStrikeStraddleData: typeof multiStrikeStraddleData;
   multiStrikeOIData: typeof multiStrikeOIData;
+  oiGainerLooserData: typeof oiGainerLooserData;
 }
 
 interface PremiumDecayState {
@@ -118,6 +121,14 @@ interface MultiStrikeOIState {
   historicalDate: string;
 }
 
+interface OIGainerLooserState {
+  symbol: string;
+  expiry: string;
+  interval: string;
+  isLive: boolean;
+  historicalDate: string;
+}
+
 
 const initialState: ChartState = {
   filters: {
@@ -189,7 +200,15 @@ const initialState: ChartState = {
     overallOI: false,
     isLive: true,
     historicalDate: new Date().toISOString().split('T')[0],
-  },  chartData,
+  },
+  oiGainerLooserFilters: {
+    symbol: 'NIFTY',
+    expiry: '12-06-2025',
+    interval: '15 Min',
+    isLive: true,
+    historicalDate: new Date().toISOString().split('T')[0],
+  },
+  chartData,
   premiumDecayData,
   coiAnalysisData,
   trendingStrikesData,
@@ -198,6 +217,7 @@ const initialState: ChartState = {
   straddleAnalysisData,
   multiStrikeStraddleData,
   multiStrikeOIData,
+  oiGainerLooserData,
 };
 
 export const chartSlice = createSlice({
@@ -227,8 +247,11 @@ export const chartSlice = createSlice({
     setMultiStrikeOIFilters: (state, action: PayloadAction<Partial<MultiStrikeOIState>>) => {
       state.multiStrikeOIFilters = { ...state.multiStrikeOIFilters, ...action.payload };
     },
+    setOIGainerLooserFilters: (state, action: PayloadAction<Partial<OIGainerLooserState>>) => {
+      state.oiGainerLooserFilters = { ...state.oiGainerLooserFilters, ...action.payload };
+    },
   },
 });
 
-export const { setFilters, setChartData, setPremiumDecayFilters, setCOIAnalysisFilters, setTrendingStrikesFilters, setPCRAnalysisFilters, setATMPremiumAnalysisFilters, setStraddleAnalysisFilters, setMultiStrikeStraddleFilters, setMultiStrikeOIFilters } = chartSlice.actions;
+export const { setFilters, setChartData, setPremiumDecayFilters, setCOIAnalysisFilters, setTrendingStrikesFilters, setPCRAnalysisFilters, setATMPremiumAnalysisFilters, setStraddleAnalysisFilters, setMultiStrikeStraddleFilters, setMultiStrikeOIFilters, setOIGainerLooserFilters } = chartSlice.actions;
 export default chartSlice.reducer;
