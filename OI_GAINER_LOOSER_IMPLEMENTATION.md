@@ -67,3 +67,58 @@ Successfully implemented the OI Gainer/Looser page at `/options/oi-gainer-looser
 - Proper text colors and borders based on selected theme
 
 The page is now ready and accessible via the Options menu → "OI Gainer/Looser" navigation item.
+
+
+
+Implementation Summary:
+1. Data Structure Created
+File: priceVsOIData.json
+Contains dummy data for call and put options with price and OI movements over time
+Includes separate chart data for calls and puts
+2. Redux State Management
+Updated: chartSlice.ts
+Added PriceVsOIState interface for filter state
+Added priceVsOIFilters and priceVsOIData to the chart state
+Added setPriceVsOIFilters action and reducer
+3. Components Created
+Filter Bar Component
+File: PriceVsOIFilterBar.tsx
+Includes symbol, expiry, strike, live toggle, and historical date controls
+Fully themed with context-based styling
+Includes "Ad options", "Send feedback", and "Why this ad?" buttons to match the UI design
+Call Price vs OI Chart
+File: CallPriceVsOIChart.tsx
+Dual-axis line chart (price on left, OI on right)
+Blue line for price, green line for Call OI
+Custom tooltip with proper formatting
+Responsive design
+Put Price vs OI Chart
+File: PutPriceVsOIChart.tsx
+Dual-axis line chart (price on left, OI on right)
+Red line for price, yellow line for Put OI
+Custom tooltip with proper formatting
+Responsive design
+4. Main Page Component
+File: page.tsx
+Exact layout matching the provided UI design
+Two separate chart sections (Call and Put)
+Current strike information display
+Summary statistics cards showing latest values
+Footer with update information
+Fully responsive layout
+5. Key Features Implemented
+✅ Pixel-perfect layout matching the attached UI design
+✅ Theme integration using existing ThemeContext
+✅ Responsive charts with proper axis labeling
+✅ Real-time data simulation with time-based chart data
+✅ Interactive tooltips with formatted values
+✅ Filter controls for symbol, expiry, strike, etc.
+✅ Summary statistics cards with current values
+✅ TypeScript implementation following project standards
+6. Chart Specifications
+Chart #1: Call Price vs OI with dual Y-axes
+Chart #2: Put Price vs OI with dual Y-axes
+Both charts show price and OI correlation over time
+Proper color coding (blue/green for calls, red/yellow for puts)
+Interactive legends and tooltips
+The page is now fully functional and accessible at http://localhost:3000/options/price-vs-oi. It matches the provided UI design exactly with proper theming, responsive layout, and interactive charts displaying the relationship between option prices and open interest for both calls and puts.
