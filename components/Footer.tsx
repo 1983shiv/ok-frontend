@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
           className="text-sm"
           style={{ color: theme.colors.text, fontFamily: theme.fonts.primary }}
         >
-          © 2025 O1 Data. All rights reserved.
+          © 2025 OptionKart (OK). All rights reserved.
         </p>
       </div>
     </footer>

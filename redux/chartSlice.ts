@@ -2,6 +2,11 @@
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import chartData from '@/data/chartData.json';
+import premiumDecayData from "@/data/premiumDecayData.json";
+import coiAnalysisData from "@/data/coiAnalysisData.json";
+import trendingStrikesData from "@/data/trendingStrikesData.json";
+import pcrAnalysisData from "@/data/pcrAnalysisData.json";
+import atmPremiumAnalysisData from "@/data/atmPremiumAnalysisData.json";
 
 
 interface FilterState {
@@ -16,8 +21,62 @@ interface FilterState {
 
 interface ChartState {
   filters: FilterState;
+  premiumDecayFilters: PremiumDecayState;
+  coiAnalysisFilters: COIAnalysisState;
+  trendingStrikesFilters: TrendingStrikesState;
+  pcrAnalysisFilters: PCRAnalysisState;
+  atmPremiumAnalysisFilters: ATMPremiumAnalysisState;
   chartData: typeof chartData;
+  premiumDecayData: typeof premiumDecayData;
+  coiAnalysisData: typeof coiAnalysisData;
+  trendingStrikesData: typeof trendingStrikesData;
+  pcrAnalysisData: typeof pcrAnalysisData;
+  atmPremiumAnalysisData: typeof atmPremiumAnalysisData;
 }
+
+interface PremiumDecayState {
+  symbol: string;
+  expiry: string;
+  strikeCount: number;
+  rangeStart: number;
+  rangeEnd: number;
+  isLive: boolean;
+  historicalDate: string;
+}
+
+interface COIAnalysisState {
+  symbol: string;
+  expiry: string;
+  interval: string;
+  range: string;
+  isLive: boolean;
+  historicalDate: string;
+}
+
+interface TrendingStrikesState {
+  symbol: string;
+  expiry: string;
+  interval: string;
+  isLive: boolean;
+  historicalDate: string;
+}
+
+interface PCRAnalysisState {
+  symbol: string;
+  expiry: string;
+  interval: string;
+  range: string;
+  isLive: boolean;
+  historicalDate: string;
+}
+
+interface ATMPremiumAnalysisState {
+  symbol: string;
+  expiry: string;
+  isLive: boolean;
+  historicalDate: string;
+}
+
 
 const initialState: ChartState = {
   filters: {
@@ -29,7 +88,46 @@ const initialState: ChartState = {
     historicalDate: new Date().toISOString().split('T')[0],
     timeRange: [0, 100],
   },
-  chartData,
+  premiumDecayFilters: {
+    symbol: 'NIFTY',
+    expiry: premiumDecayData.expiries[0],
+    strikeCount: 10,
+    rangeStart: 24550.00,
+    rangeEnd: 25050.00,
+    isLive: true,
+    historicalDate: new Date().toISOString().split('T')[0],
+  },  coiAnalysisFilters: {
+    symbol: 'NIFTY',
+    expiry: '12-06-2025',
+    interval: '5 Min',
+    range: 'Auto',
+    isLive: true,
+    historicalDate: new Date().toISOString().split('T')[0],
+  },  trendingStrikesFilters: {
+    symbol: 'NIFTY',
+    expiry: '12-06-2025',
+    interval: '3 Min',
+    isLive: true,
+    historicalDate: new Date().toISOString().split('T')[0],
+  },  pcrAnalysisFilters: {
+    symbol: 'NIFTY',
+    expiry: '12-06-2025',
+    interval: '5 Min',
+    range: 'Auto',
+    isLive: true,
+    historicalDate: new Date().toISOString().split('T')[0],
+  },
+  atmPremiumAnalysisFilters: {
+    symbol: 'NIFTY',
+    expiry: '12-06-2025',
+    isLive: true,
+    historicalDate: new Date().toISOString().split('T')[0],
+  },  chartData,
+  premiumDecayData,
+  coiAnalysisData,
+  trendingStrikesData,
+  pcrAnalysisData,
+  atmPremiumAnalysisData,
 };
 
 export const chartSlice = createSlice({
@@ -41,9 +139,20 @@ export const chartSlice = createSlice({
     },
     setChartData: (state, action: PayloadAction<typeof chartData>) => {
       state.chartData = action.payload;
+    },    setPremiumDecayFilters: (state, action: PayloadAction<Partial<PremiumDecayState>>) => {
+      state.premiumDecayFilters = { ...state.premiumDecayFilters, ...action.payload };
+    },    setCOIAnalysisFilters: (state, action: PayloadAction<Partial<COIAnalysisState>>) => {
+      state.coiAnalysisFilters = { ...state.coiAnalysisFilters, ...action.payload };
+    },    setTrendingStrikesFilters: (state, action: PayloadAction<Partial<TrendingStrikesState>>) => {
+      state.trendingStrikesFilters = { ...state.trendingStrikesFilters, ...action.payload };
+    },    setPCRAnalysisFilters: (state, action: PayloadAction<Partial<PCRAnalysisState>>) => {
+      state.pcrAnalysisFilters = { ...state.pcrAnalysisFilters, ...action.payload };
+    },
+    setATMPremiumAnalysisFilters: (state, action: PayloadAction<Partial<ATMPremiumAnalysisState>>) => {
+      state.atmPremiumAnalysisFilters = { ...state.atmPremiumAnalysisFilters, ...action.payload };
     },
   },
 });
 
-export const { setFilters, setChartData } = chartSlice.actions;
+export const { setFilters, setChartData, setPremiumDecayFilters, setCOIAnalysisFilters, setTrendingStrikesFilters, setPCRAnalysisFilters, setATMPremiumAnalysisFilters } = chartSlice.actions;
 export default chartSlice.reducer;

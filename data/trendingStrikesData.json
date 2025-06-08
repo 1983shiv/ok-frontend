@@ -1,0 +1,68 @@
+{
+  "symbols": ["NIFTY", "BANKNIFTY", "FINNIFTY", "MIDCPNIFTY"],
+  "expiries": ["12-06-2025", "19-06-2025", "26-06-2025", "03-07-2025"],
+  "intervals": ["1 Min", "3 Min", "5 Min", "15 Min", "30 Min", "1 Hour"],
+  "currentTime": "15:30",
+  "lastUpdated": "2025-06-12 15:30:25",
+  "topTrendingStrikes": {
+    "call": 2,
+    "put": 3
+  },
+  "strikePricesTrending": [
+    {
+      "strikePrice": 24800,
+      "timeSeriesData": [
+        { "time": "9:15", "oi": 120000 },
+        { "time": "10:30", "oi": 145000 },
+        { "time": "11:45", "oi": 180000 },
+        { "time": "13:00", "oi": 220000 },
+        { "time": "14:15", "oi": 280000 },
+        { "time": "15:30", "oi": 320000 }
+      ]
+    },
+    {
+      "strikePrice": 24850,
+      "timeSeriesData": [
+        { "time": "9:15", "oi": 80000 },
+        { "time": "10:30", "oi": 110000 },
+        { "time": "11:45", "oi": 160000 },
+        { "time": "13:00", "oi": 210000 },
+        { "time": "14:15", "oi": 270000 },
+        { "time": "15:30", "oi": 310000 }
+      ]
+    },
+    {
+      "strikePrice": 24900,
+      "timeSeriesData": [
+        { "time": "9:15", "oi": 100000 },
+        { "time": "10:30", "oi": 130000 },
+        { "time": "11:45", "oi": 170000 },
+        { "time": "13:00", "oi": 200000 },
+        { "time": "14:15", "oi": 240000 },
+        { "time": "15:30", "oi": 285000 }
+      ]
+    },
+    {
+      "strikePrice": 24750,
+      "timeSeriesData": [
+        { "time": "9:15", "oi": 90000 },
+        { "time": "10:30", "oi": 115000 },
+        { "time": "11:45", "oi": 150000 },
+        { "time": "13:00", "oi": 185000 },
+        { "time": "14:15", "oi": 230000 },
+        { "time": "15:30", "oi": 275000 }
+      ]
+    },
+    {
+      "strikePrice": 24950,
+      "timeSeriesData": [
+        { "time": "9:15", "oi": 70000 },
+        { "time": "10:30", "oi": 95000 },
+        { "time": "11:45", "oi": 135000 },
+        { "time": "13:00", "oi": 175000 },
+        { "time": "14:15", "oi": 215000 },
+        { "time": "15:30", "oi": 260000 }
+      ]
+    }
+  ]
+}

@@ -21,9 +21,9 @@ const Navbar: React.FC = () => {
       items: [
         { title: 'Oi Analysis', href: '/options/oi-analysis' },
         { title: 'Trending Strikes', href: '/options/trending-strikes' },
-        { title: 'Call Vs Put OI', href: '/options/call-vs-put-oi' },
-        { title: 'Put Call Ratio', href: '/options/put-call-ratio' },
-        { title: 'ATM Premium', href: '/options/atm-premium' },
+        { title: 'Change in OI', href: '/options/coi-analysis' },
+        { title: 'PCR Analysis', href: '/options/pcr-analysis' },
+        { title: 'ATM Premium', href: '/options/atm-premium-analysis' },
         { title: 'Implied Volatility', href: '/options/implied-volatility' },
         { title: 'Multi-Strike OI', href: '/options/multi-strike-oi' },
         { title: 'OI Internal Value', href: '/options/oi-internal-value' },
@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
           className="text-xl font-bold"
           style={{ color: theme.colors.text, fontFamily: theme.fonts.primary }}
         >
-          O1 Data
+          OptionKart
         </span>
 
         <div className="flex items-center space-x-6">

@@ -13,6 +13,7 @@ type Theme = {
     chart?: {
       ce: string;
       pe: string;
+      idx? : string;
     };
     button: {
       bg: string;
@@ -48,11 +49,11 @@ const themes: Theme[] = [
       card: {
         bg: '#1e293b',
         border: '#334155',
-      },
-      divider: '#334155',
+      },      divider: '#334155',
       chart: {
         ce: '#3b82f6', // blue-500 - Calls
         pe: '#ef4444', // red-500 - Puts
+        idx: '#10b981', // green-500 - Index/Future
       },
     },
     fonts: {
@@ -76,11 +77,11 @@ const themes: Theme[] = [
       card: {
         bg: '#f8fafc',
         border: '#e2e8f0',
-      },
-      divider: '#e2e8f0',
+      },      divider: '#e2e8f0',
       chart: {
         ce: '#2563eb', // blue-600 - Calls
         pe: '#dc2626', // red-600 - Puts
+        idx: '#059669', // emerald-600 - Index/Future
       },
     },
     fonts: {
@@ -104,11 +105,11 @@ const themes: Theme[] = [
       card: {
         bg: '#1e40af',
         border: '#3b82f6',
-      },
-      divider: '#3b82f6',
+      },      divider: '#3b82f6',
       chart: {
         ce: '#93c5fd', // blue-300 - Calls (lighter for better contrast)
         pe: '#fca5a5', // red-300 - Puts
+        idx: '#6ee7b7', // emerald-300 - Index/Future
       },
     },
     fonts: {
@@ -132,11 +133,11 @@ const themes: Theme[] = [
       card: {
         bg: '#047857',
         border: '#059669',
-      },
-      divider: '#059669',
+      },      divider: '#059669',
       chart: {
         ce: '#22d3ee', // cyan-400 - Calls
         pe: '#f87171', // red-400 - Puts
+        idx: '#fbbf24', // amber-400 - Index/Future
       },
     },
     fonts: {
@@ -160,11 +161,11 @@ const themes: Theme[] = [
       card: {
         bg: '#6d28d9',
         border: '#8b5cf6',
-      },
-      divider: '#8b5cf6',
+      },      divider: '#8b5cf6',
       chart: {
         ce: '#818cf8', // indigo-400 - Calls
         pe: '#f472b6', // pink-400 - Puts
+        idx: '#34d399', // emerald-400 - Index/Future
       },
     },
     fonts: {
