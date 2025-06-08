@@ -8,6 +8,8 @@ import trendingStrikesData from "@/data/trendingStrikesData.json";
 import pcrAnalysisData from "@/data/pcrAnalysisData.json";
 import atmPremiumAnalysisData from "@/data/atmPremiumAnalysisData.json";
 import straddleAnalysisData from "@/data/straddleAnalysisData.json";
+import multiStrikeStraddleData from "@/data/multiStrikeStraddleData.json";
+import multiStrikeOIData from "@/data/multiStrikeOIData.json";
 
 
 interface FilterState {
@@ -28,6 +30,8 @@ interface ChartState {
   pcrAnalysisFilters: PCRAnalysisState;
   atmPremiumAnalysisFilters: ATMPremiumAnalysisState;
   straddleAnalysisFilters: StraddleAnalysisState;
+  multiStrikeStraddleFilters: MultiStrikeStraddleState;
+  multiStrikeOIFilters: MultiStrikeOIState;
   chartData: typeof chartData;
   premiumDecayData: typeof premiumDecayData;
   coiAnalysisData: typeof coiAnalysisData;
@@ -35,6 +39,8 @@ interface ChartState {
   pcrAnalysisData: typeof pcrAnalysisData;
   atmPremiumAnalysisData: typeof atmPremiumAnalysisData;
   straddleAnalysisData: typeof straddleAnalysisData;
+  multiStrikeStraddleData: typeof multiStrikeStraddleData;
+  multiStrikeOIData: typeof multiStrikeOIData;
 }
 
 interface PremiumDecayState {
@@ -88,6 +94,30 @@ interface StraddleAnalysisState {
   historicalDate: string;
 }
 
+interface MultiStrikeStraddleState {
+  symbol: string;
+  expiry: string;
+  strike1: { value: number; enabled: boolean };
+  strike2: { value: number; enabled: boolean };
+  strike3: { value: number; enabled: boolean };
+  individualPrices: boolean;
+  isLive: boolean;
+  historicalDate: string;
+}
+
+interface MultiStrikeOIState {
+  symbol: string;
+  expiry: string;
+  strike1: { value: number; enabled: boolean };
+  strike2: { value: number; enabled: boolean };
+  strike3: { value: number; enabled: boolean };
+  strike4: { value: number; enabled: boolean };
+  strike5: { value: number; enabled: boolean };
+  overallOI: boolean;
+  isLive: boolean;
+  historicalDate: string;
+}
+
 
 const initialState: ChartState = {
   filters: {
@@ -132,21 +162,42 @@ const initialState: ChartState = {
     expiry: '12-06-2025',
     isLive: true,
     historicalDate: new Date().toISOString().split('T')[0],
-  },
-  straddleAnalysisFilters: {
+  },  straddleAnalysisFilters: {
     symbol: 'NIFTY',
     expiry: '12-06-2025',
     strike: 25000,
     isLive: true,
     historicalDate: new Date().toISOString().split('T')[0],
+  },  multiStrikeStraddleFilters: {
+    symbol: 'NIFTY',
+    expiry: '12-06-2025',
+    strike1: { value: 24900, enabled: true },
+    strike2: { value: 25000, enabled: true },
+    strike3: { value: 25100, enabled: true },
+    individualPrices: false,
+    isLive: true,
+    historicalDate: new Date().toISOString().split('T')[0],
   },
-  chartData,
+  multiStrikeOIFilters: {
+    symbol: 'NIFTY',
+    expiry: '12-06-2025',
+    strike1: { value: 24800, enabled: true },
+    strike2: { value: 24900, enabled: true },
+    strike3: { value: 25000, enabled: true },
+    strike4: { value: 25100, enabled: true },
+    strike5: { value: 25200, enabled: true },
+    overallOI: false,
+    isLive: true,
+    historicalDate: new Date().toISOString().split('T')[0],
+  },  chartData,
   premiumDecayData,
   coiAnalysisData,
   trendingStrikesData,
   pcrAnalysisData,
   atmPremiumAnalysisData,
   straddleAnalysisData,
+  multiStrikeStraddleData,
+  multiStrikeOIData,
 };
 
 export const chartSlice = createSlice({
@@ -168,12 +219,16 @@ export const chartSlice = createSlice({
       state.pcrAnalysisFilters = { ...state.pcrAnalysisFilters, ...action.payload };
     },    setATMPremiumAnalysisFilters: (state, action: PayloadAction<Partial<ATMPremiumAnalysisState>>) => {
       state.atmPremiumAnalysisFilters = { ...state.atmPremiumAnalysisFilters, ...action.payload };
-    },
-    setStraddleAnalysisFilters: (state, action: PayloadAction<Partial<StraddleAnalysisState>>) => {
+    },    setStraddleAnalysisFilters: (state, action: PayloadAction<Partial<StraddleAnalysisState>>) => {
       state.straddleAnalysisFilters = { ...state.straddleAnalysisFilters, ...action.payload };
+    },    setMultiStrikeStraddleFilters: (state, action: PayloadAction<Partial<MultiStrikeStraddleState>>) => {
+      state.multiStrikeStraddleFilters = { ...state.multiStrikeStraddleFilters, ...action.payload };
+    },
+    setMultiStrikeOIFilters: (state, action: PayloadAction<Partial<MultiStrikeOIState>>) => {
+      state.multiStrikeOIFilters = { ...state.multiStrikeOIFilters, ...action.payload };
     },
   },
 });
 
-export const { setFilters, setChartData, setPremiumDecayFilters, setCOIAnalysisFilters, setTrendingStrikesFilters, setPCRAnalysisFilters, setATMPremiumAnalysisFilters, setStraddleAnalysisFilters } = chartSlice.actions;
+export const { setFilters, setChartData, setPremiumDecayFilters, setCOIAnalysisFilters, setTrendingStrikesFilters, setPCRAnalysisFilters, setATMPremiumAnalysisFilters, setStraddleAnalysisFilters, setMultiStrikeStraddleFilters, setMultiStrikeOIFilters } = chartSlice.actions;
 export default chartSlice.reducer;
