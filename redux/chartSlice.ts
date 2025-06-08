@@ -11,6 +11,7 @@ import straddleAnalysisData from "@/data/straddleAnalysisData.json";
 import multiStrikeStraddleData from "@/data/multiStrikeStraddleData.json";
 import multiStrikeOIData from "@/data/multiStrikeOIData.json";
 import oiGainerLooserData from "@/data/oiGainerLooserData.json";
+import longShortOptionsData from "@/data/longShortOptionsData.json";
 
 
 interface FilterState {
@@ -34,6 +35,7 @@ interface ChartState {
   multiStrikeStraddleFilters: MultiStrikeStraddleState;
   multiStrikeOIFilters: MultiStrikeOIState;
   oiGainerLooserFilters: OIGainerLooserState;
+  longShortFilters: LongShortState;
   chartData: typeof chartData;
   premiumDecayData: typeof premiumDecayData;
   coiAnalysisData: typeof coiAnalysisData;
@@ -44,6 +46,7 @@ interface ChartState {
   multiStrikeStraddleData: typeof multiStrikeStraddleData;
   multiStrikeOIData: typeof multiStrikeOIData;
   oiGainerLooserData: typeof oiGainerLooserData;
+  longShortOptionsData: typeof longShortOptionsData;
 }
 
 interface PremiumDecayState {
@@ -129,6 +132,15 @@ interface OIGainerLooserState {
   historicalDate: string;
 }
 
+interface LongShortState {
+  symbol: string;
+  expiry: string;
+  strike: string;
+  interval: string;
+  isLive: boolean;
+  historicalDate: string;
+}
+
 
 const initialState: ChartState = {
   filters: {
@@ -200,10 +212,17 @@ const initialState: ChartState = {
     overallOI: false,
     isLive: true,
     historicalDate: new Date().toISOString().split('T')[0],
-  },
-  oiGainerLooserFilters: {
+  },  oiGainerLooserFilters: {
     symbol: 'NIFTY',
     expiry: '12-06-2025',
+    interval: '15 Min',
+    isLive: true,
+    historicalDate: new Date().toISOString().split('T')[0],
+  },
+  longShortFilters: {
+    symbol: 'NIFTY',
+    expiry: '12-06-2025',
+    strike: '25000.00CE',
     interval: '15 Min',
     isLive: true,
     historicalDate: new Date().toISOString().split('T')[0],
@@ -218,6 +237,7 @@ const initialState: ChartState = {
   multiStrikeStraddleData,
   multiStrikeOIData,
   oiGainerLooserData,
+  longShortOptionsData,
 };
 
 export const chartSlice = createSlice({
@@ -246,12 +266,14 @@ export const chartSlice = createSlice({
     },
     setMultiStrikeOIFilters: (state, action: PayloadAction<Partial<MultiStrikeOIState>>) => {
       state.multiStrikeOIFilters = { ...state.multiStrikeOIFilters, ...action.payload };
-    },
-    setOIGainerLooserFilters: (state, action: PayloadAction<Partial<OIGainerLooserState>>) => {
+    },    setOIGainerLooserFilters: (state, action: PayloadAction<Partial<OIGainerLooserState>>) => {
       state.oiGainerLooserFilters = { ...state.oiGainerLooserFilters, ...action.payload };
+    },
+    setLongShortFilters: (state, action: PayloadAction<Partial<LongShortState>>) => {
+      state.longShortFilters = { ...state.longShortFilters, ...action.payload };
     },
   },
 });
 
-export const { setFilters, setChartData, setPremiumDecayFilters, setCOIAnalysisFilters, setTrendingStrikesFilters, setPCRAnalysisFilters, setATMPremiumAnalysisFilters, setStraddleAnalysisFilters, setMultiStrikeStraddleFilters, setMultiStrikeOIFilters, setOIGainerLooserFilters } = chartSlice.actions;
+export const { setFilters, setChartData, setPremiumDecayFilters, setCOIAnalysisFilters, setTrendingStrikesFilters, setPCRAnalysisFilters, setATMPremiumAnalysisFilters, setStraddleAnalysisFilters, setMultiStrikeStraddleFilters, setMultiStrikeOIFilters, setOIGainerLooserFilters, setLongShortFilters } = chartSlice.actions;
 export default chartSlice.reducer;

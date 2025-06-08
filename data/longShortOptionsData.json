@@ -1,0 +1,248 @@
+{
+  "data": [
+    {
+      "date": "15:30:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 175.85,
+      "priceChange": -2.10,
+      "oiChange": "+87130",
+      "longVsShort": "Long Unwinding"
+    },
+    {
+      "date": "15:15:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 182.90,
+      "priceChange": -1.85,
+      "oiChange": "+87130",
+      "longVsShort": "Long Unwinding"
+    },
+    {
+      "date": "15:00:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 187.80,
+      "priceChange": 0.45,
+      "oiChange": "+87130",
+      "longVsShort": "Long Building"
+    },
+    {
+      "date": "14:45:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 180.85,
+      "priceChange": -20.40,
+      "oiChange": "-11178",
+      "longVsShort": "Long Unwinding"
+    },
+    {
+      "date": "14:30:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 201.25,
+      "priceChange": 24.35,
+      "oiChange": "+35756",
+      "longVsShort": "Short Covering"
+    },
+    {
+      "date": "14:15:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 177.00,
+      "priceChange": 1.30,
+      "oiChange": "+35756",
+      "longVsShort": "Long Building"
+    },
+    {
+      "date": "14:00:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 174.10,
+      "priceChange": 0.30,
+      "oiChange": "+26576",
+      "longVsShort": "Long Building"
+    },
+    {
+      "date": "13:45:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 174.00,
+      "priceChange": 4.30,
+      "oiChange": "+26426",
+      "longVsShort": "Long Building"
+    },
+    {
+      "date": "13:30:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 167.80,
+      "priceChange": -4.25,
+      "oiChange": "+26576",
+      "longVsShort": "Short Bullish"
+    },
+    {
+      "date": "13:15:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 177.00,
+      "priceChange": -4.35,
+      "oiChange": "+26400",
+      "longVsShort": "Short Bullish"
+    },
+    {
+      "date": "13:00:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 181.35,
+      "priceChange": -3.60,
+      "oiChange": "-26046",
+      "longVsShort": "Long Unwinding"
+    },
+    {
+      "date": "12:45:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 184.95,
+      "priceChange": -4.15,
+      "oiChange": "+36226",
+      "longVsShort": "Short Bullish"
+    },
+    {
+      "date": "12:30:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 191.50,
+      "priceChange": -17.50,
+      "oiChange": "+65750",
+      "longVsShort": "Short Bullish"
+    },
+    {
+      "date": "12:15:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 209.40,
+      "priceChange": -25.75,
+      "oiChange": "+50100",
+      "longVsShort": "Short Bullish"
+    },
+    {
+      "date": "12:00:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 235.15,
+      "priceChange": 26.30,
+      "oiChange": "-344700",
+      "longVsShort": "Short Covering"
+    },
+    {
+      "date": "11:45:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 214.85,
+      "priceChange": 29.65,
+      "oiChange": "-336750",
+      "longVsShort": "Short Covering"
+    },
+    {
+      "date": "11:30:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 185.20,
+      "priceChange": -5.05,
+      "oiChange": "-34225",
+      "longVsShort": "Long Unwinding"
+    },
+    {
+      "date": "11:15:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 193.25,
+      "priceChange": 21.95,
+      "oiChange": "+26375",
+      "longVsShort": "Long Building"
+    },
+    {
+      "date": "11:00:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 171.30,
+      "priceChange": 5.70,
+      "oiChange": "-13225",
+      "longVsShort": "Short Covering"
+    },
+    {
+      "date": "10:45:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 161.40,
+      "priceChange": 52.10,
+      "oiChange": "-1345210",
+      "longVsShort": "Short Covering"
+    },
+    {
+      "date": "10:30:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 109.30,
+      "priceChange": 25.50,
+      "oiChange": "-433850",
+      "longVsShort": "Short Covering"
+    },
+    {
+      "date": "10:15:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 84.00,
+      "priceChange": 7.85,
+      "oiChange": "-216850",
+      "longVsShort": "Short Covering"
+    },
+    {
+      "date": "10:00:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 74.15,
+      "priceChange": 5.20,
+      "oiChange": "+54025",
+      "longVsShort": "Long Building"
+    },
+    {
+      "date": "09:45:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 68.95,
+      "priceChange": -4.05,
+      "oiChange": "+293950",
+      "longVsShort": "Short Bullish"
+    },
+    {
+      "date": "09:30:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 73.00,
+      "priceChange": -30.00,
+      "oiChange": "+261500",
+      "longVsShort": "Short Bullish"
+    },
+    {
+      "date": "09:15:00",
+      "symbol": "25000.00CE",
+      "lastPrice": 103.00,
+      "priceChange": 0.00,
+      "oiChange": "0",
+      "longVsShort": "Long Building"
+    }
+  ],
+  "currentNiftyFuture": 25235.15,
+  "pcr": 0.87,
+  "totalCallOI": 2540000,
+  "totalPutOI": 2210000,
+  "maxPain": 25000,
+  "impliedVolatility": 14.5,
+  "chartData": {
+    "priceMovement": [
+      { "time": "09:15", "price": 103.00, "oi": 0, "longBuildingPercent": 25, "shortCoveringPercent": 15, "longUnwindingPercent": 35, "shortBuiltPercent": 25 },
+      { "time": "09:30", "price": 73.00, "oi": 261500, "longBuildingPercent": 10, "shortCoveringPercent": 5, "longUnwindingPercent": 15, "shortBuiltPercent": 70 },
+      { "time": "09:45", "price": 68.95, "oi": 555450, "longBuildingPercent": 15, "shortCoveringPercent": 10, "longUnwindingPercent": 20, "shortBuiltPercent": 55 },
+      { "time": "10:00", "price": 74.15, "oi": 609475, "longBuildingPercent": 40, "shortCoveringPercent": 25, "longUnwindingPercent": 20, "shortBuiltPercent": 15 },
+      { "time": "10:15", "price": 84.00, "oi": 392625, "longBuildingPercent": 20, "shortCoveringPercent": 60, "longUnwindingPercent": 15, "shortBuiltPercent": 5 },
+      { "time": "10:30", "price": 109.30, "oi": -41225, "longBuildingPercent": 15, "shortCoveringPercent": 75, "longUnwindingPercent": 8, "shortBuiltPercent": 2 },
+      { "time": "10:45", "price": 161.40, "oi": -1386435, "longBuildingPercent": 10, "shortCoveringPercent": 80, "longUnwindingPercent": 8, "shortBuiltPercent": 2 },
+      { "time": "11:00", "price": 171.30, "oi": -1399660, "longBuildingPercent": 15, "shortCoveringPercent": 65, "longUnwindingPercent": 15, "shortBuiltPercent": 5 },
+      { "time": "11:15", "price": 193.25, "oi": -1373285, "longBuildingPercent": 55, "shortCoveringPercent": 25, "longUnwindingPercent": 15, "shortBuiltPercent": 5 },
+      { "time": "11:30", "price": 185.20, "oi": -1407510, "longBuildingPercent": 20, "shortCoveringPercent": 15, "longUnwindingPercent": 55, "shortBuiltPercent": 10 },
+      { "time": "11:45", "price": 214.85, "oi": -1744260, "longBuildingPercent": 15, "shortCoveringPercent": 70, "longUnwindingPercent": 12, "shortBuiltPercent": 3 },
+      { "time": "12:00", "price": 235.15, "oi": -2088960, "longBuildingPercent": 10, "shortCoveringPercent": 80, "longUnwindingPercent": 8, "shortBuiltPercent": 2 },
+      { "time": "12:15", "price": 209.40, "oi": -2038860, "longBuildingPercent": 5, "shortCoveringPercent": 15, "longUnwindingPercent": 20, "shortBuiltPercent": 60 },
+      { "time": "12:30", "price": 191.50, "oi": -1973110, "longBuildingPercent": 5, "shortCoveringPercent": 10, "longUnwindingPercent": 15, "shortBuiltPercent": 70 },
+      { "time": "12:45", "price": 184.95, "oi": -1936884, "longBuildingPercent": 8, "shortCoveringPercent": 12, "longUnwindingPercent": 20, "shortBuiltPercent": 60 },
+      { "time": "13:00", "price": 181.35, "oi": -1962930, "longBuildingPercent": 15, "shortCoveringPercent": 20, "longUnwindingPercent": 55, "shortBuiltPercent": 10 },
+      { "time": "13:15", "price": 177.00, "oi": -1936530, "longBuildingPercent": 10, "shortCoveringPercent": 15, "longUnwindingPercent": 25, "shortBuiltPercent": 50 },
+      { "time": "13:30", "price": 167.80, "oi": -1909954, "longBuildingPercent": 12, "shortCoveringPercent": 18, "longUnwindingPercent": 20, "shortBuiltPercent": 50 },
+      { "time": "13:45", "price": 174.00, "oi": -1883528, "longBuildingPercent": 45, "shortCoveringPercent": 25, "longUnwindingPercent": 20, "shortBuiltPercent": 10 },
+      { "time": "14:00", "price": 174.10, "oi": -1856952, "longBuildingPercent": 50, "shortCoveringPercent": 20, "longUnwindingPercent": 20, "shortBuiltPercent": 10 },
+      { "time": "14:15", "price": 177.00, "oi": -1821196, "longBuildingPercent": 55, "shortCoveringPercent": 25, "longUnwindingPercent": 15, "shortBuiltPercent": 5 },
+      { "time": "14:30", "price": 201.25, "oi": -1785440, "longBuildingPercent": 20, "shortCoveringPercent": 65, "longUnwindingPercent": 12, "shortBuiltPercent": 3 },
+      { "time": "14:45", "price": 180.85, "oi": -1796618, "longBuildingPercent": 15, "shortCoveringPercent": 25, "longUnwindingPercent": 50, "shortBuiltPercent": 10 },
+      { "time": "15:00", "price": 187.80, "oi": -1709488, "longBuildingPercent": 45, "shortCoveringPercent": 30, "longUnwindingPercent": 20, "shortBuiltPercent": 5 },
+      { "time": "15:15", "price": 182.90, "oi": -1622358, "longBuildingPercent": 20, "shortCoveringPercent": 25, "longUnwindingPercent": 45, "shortBuiltPercent": 10 },
+      { "time": "15:30", "price": 175.85, "oi": -1535228, "longBuildingPercent": 15, "shortCoveringPercent": 20, "longUnwindingPercent": 55, "shortBuiltPercent": 10 }
+    ]
+  }
+}
