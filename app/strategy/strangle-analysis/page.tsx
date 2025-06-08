@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useTheme } from '@/context/ThemeContext';
-import StraddleAnalysisFilterBar from '@/components/charts/StraddleAnalysisFilterBar';
+import StrangleAnalysisFilterBar from '@/components/charts/StrangleAnalysisFilterBar';
 import StraddlePriceLineChart from '@/components/charts/StraddlePriceLineChart';
 
 const StraddleAnalysisPage: React.FC = () => {
@@ -13,7 +13,7 @@ const StraddleAnalysisPage: React.FC = () => {
       <div className="max-w-7xl mx-auto">
 
         {/* Filter Bar */}
-        <StraddleAnalysisFilterBar />
+        <StrangleAnalysisFilterBar />
 
         {/* Chart Section */}
         <div 

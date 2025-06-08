@@ -91,7 +91,7 @@ const StraddlePriceLineChart: React.FC = () => {
           <Line 
             type="monotone" 
             dataKey="vwap" 
-            stroke="rgba(255, 255, 255, 0.6)"
+            stroke={theme.colors.chart?.idx}
             strokeWidth={1}
             strokeDasharray="5 5"
             dot={false}

@@ -35,8 +35,8 @@ const Navbar: React.FC = () => {
     {
       title: 'Strategy',
       items: [
-        { title: 'Straddle', href: '/strategy/straddle' },
-        { title: 'Strangle', href: '/strategy/strangle' },
+        { title: 'Straddle', href: '/strategy/straddle-analysis' },
+        { title: 'Strangle', href: '/strategy/strangle-analysis' },
         { title: 'MultiStrike Straddle', href: '/strategy/multistrike-straddle' },
         { title: 'Straddle SnapShot', href: '/strategy/straddle-snapshot' },
       ],
