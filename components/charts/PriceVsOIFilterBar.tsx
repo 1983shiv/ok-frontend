@@ -6,7 +6,14 @@ import { RootState } from '@/redux/store';
 import { setPriceVsOIFilters } from '@/redux/chartSlice';
 import { useTheme } from '@/context/ThemeContext';
 
-export default function PriceVsOIFilterBar() {
+const idx = ["NIFTY", "BANKNIFTY", "FINNIFTY", "MIDCPNIFTY"]
+const stock = ["ADANIENT", "RELIANCE", "TATATECH", "TCS", "INFY"]
+
+interface PriceVsOIFilterBarProps {
+  enabledFuture?: boolean
+}
+
+export default function PriceVsOIFilterBar({enabledFuture = true} : PriceVsOIFilterBarProps) {
   const dispatch = useDispatch();
   const { theme } = useTheme();
   const { priceVsOIFilters } = useSelector((state: RootState) => state.chart);
@@ -31,9 +38,11 @@ export default function PriceVsOIFilterBar() {
               color: theme.colors.text
             }}
           >
-            <option value="NIFTY">NIFTY</option>
-            <option value="BANKNIFTY">BANKNIFTY</option>
-            <option value="SENSEX">SENSEX</option>
+            {!enabledFuture ? stock.map((item, index) => (
+              <option value={item} key={index}>{item}</option>
+            )) : idx.map((item, index) => (
+              <option value={item} key={index}>{item}</option>
+            ))}
           </select>
         </div>        {/* Expiry Dropdown */}
         <div className="flex items-center gap-2">
@@ -51,7 +60,9 @@ export default function PriceVsOIFilterBar() {
             <option value="19/04/2025">19/04/2025</option>
             <option value="26/04/2025">26/04/2025</option>
           </select>
-        </div>        {/* Strike */}
+        </div>        
+        {/* Strike */}
+        {enabledFuture && 
         <div className="flex items-center gap-2">
           <label className="text-sm font-medium" style={{ color: theme.colors.text }}>Strike</label><input
             type="number"
@@ -64,7 +75,10 @@ export default function PriceVsOIFilterBar() {
               color: theme.colors.text
             }}
           />
-        </div>        {/* Live Toggle */}
+        </div>   
+        }     
+        
+        {/* Live Toggle */}
         <div className="flex items-center gap-2">
           <label className="text-sm font-medium" style={{ color: theme.colors.text }}>Live</label>
           <input
@@ -89,18 +103,8 @@ export default function PriceVsOIFilterBar() {
               }}
             />
           </div>
-        )}        {/* Send Feedback and Why this ad buttons */}
-        <div className="ml-auto flex items-center gap-2">
-          <button className="text-xs bg-blue-500/20 px-2 py-1 rounded" style={{ color: theme.colors.accent }}>
-            Ad options
-          </button>
-          <button className="text-xs bg-blue-500/20 px-2 py-1 rounded" style={{ color: theme.colors.accent }}>
-            Send feedback
-          </button>
-          <button className="text-xs" style={{ color: theme.colors.text }}>
-            Why this ad?
-          </button>
-        </div>
+        )}        
+        
       </div>
     </div>
   );

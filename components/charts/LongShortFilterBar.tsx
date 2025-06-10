@@ -6,7 +6,14 @@ import { RootState } from '@/redux/store';
 import { setLongShortFilters } from '@/redux/chartSlice';
 import { useTheme } from '@/context/ThemeContext';
 
-const LongShortFilterBar: React.FC = () => {
+const idx = ["NIFTY", "BANKNIFTY", "FINNIFTY", "MIDCPNIFTY"]
+const stock = ["ADANIENT", "RELIANCE", "TATATECH", "TCS", "INFY"]
+
+interface LongShortFilterBarProps {
+  futureEnabled?: boolean;
+}
+
+const LongShortFilterBar: React.FC<LongShortFilterBarProps> = ({ futureEnabled }) => {
   const dispatch = useDispatch();
   const { longShortFilters } = useSelector((state: RootState) => state.chart);
   const { theme } = useTheme();
@@ -39,9 +46,11 @@ const LongShortFilterBar: React.FC = () => {
               color: theme.colors.text,
             }}
           >
-            <option value="NIFTY">NIFTY</option>
-            <option value="BANKNIFTY">BANKNIFTY</option>
-            <option value="FINNIFTY">FINNIFTY</option>
+            {futureEnabled ? stock.map((item, index) => (
+              <option value={item} key={index}>{item}</option>
+            )) : idx.map((item, index) => (
+              <option value={item} key={index}>{item}</option>
+            ))}
           </select>
         </div>
 
@@ -67,6 +76,7 @@ const LongShortFilterBar: React.FC = () => {
         </div>
 
         {/* Strike Filter */}
+        {! futureEnabled && 
         <div className="flex flex-col">
           <label className="text-xs font-medium mb-1" style={{ color: theme.colors.text }}>
             Strike
@@ -89,6 +99,7 @@ const LongShortFilterBar: React.FC = () => {
             <option value="25100.00PE">25100.00PE</option>
           </select>
         </div>
+        }
 
         {/* Interval Filter */}
         <div className="flex flex-col">

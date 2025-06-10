@@ -13,6 +13,9 @@ import multiStrikeOIData from "@/data/multiStrikeOIData.json";
 import oiGainerLooserData from "@/data/oiGainerLooserData.json";
 import longShortOptionsData from "@/data/longShortOptionsData.json";
 import priceVsOIData from "@/data/priceVsOIData.json";
+import futurePriceVsOIData from "@/data/futurePriceVsOIData.json";
+import ivAnalysisData from "@/data/ivAnalysisData.json";
+import futuresOIAnalysisData from "@/data/futuresOIAnalysisData.json";
 
 
 interface FilterState {
@@ -35,9 +38,11 @@ interface ChartState {
   straddleAnalysisFilters: StraddleAnalysisState;
   multiStrikeStraddleFilters: MultiStrikeStraddleState;
   multiStrikeOIFilters: MultiStrikeOIState;
-  oiGainerLooserFilters: OIGainerLooserState;
-  longShortFilters: LongShortState;
+  oiGainerLooserFilters: OIGainerLooserState;  longShortFilters: LongShortState;
   priceVsOIFilters: PriceVsOIState;
+  futurePriceVsOIFilters: FuturePriceVsOIState;
+  ivAnalysisFilters: IVAnalysisState;
+  futuresOIAnalysisFilters: FuturesOIAnalysisState;
   chartData: typeof chartData;
   premiumDecayData: typeof premiumDecayData;
   coiAnalysisData: typeof coiAnalysisData;
@@ -47,9 +52,11 @@ interface ChartState {
   straddleAnalysisData: typeof straddleAnalysisData;
   multiStrikeStraddleData: typeof multiStrikeStraddleData;
   multiStrikeOIData: typeof multiStrikeOIData;
-  oiGainerLooserData: typeof oiGainerLooserData;
-  longShortOptionsData: typeof longShortOptionsData;
+  oiGainerLooserData: typeof oiGainerLooserData;  longShortOptionsData: typeof longShortOptionsData;
   priceVsOIData: typeof priceVsOIData;
+  futurePriceVsOIData: typeof futurePriceVsOIData;
+  ivAnalysisData: typeof ivAnalysisData;
+  futuresOIAnalysisData: typeof futuresOIAnalysisData;
 }
 
 interface PremiumDecayState {
@@ -153,6 +160,31 @@ interface PriceVsOIState {
   historicalDate: string;
 }
 
+interface FuturePriceVsOIState {
+  symbol: string;
+  expiry: string;
+  duration: string;
+  isLive: boolean;
+  historicalDate: string;
+}
+
+interface IVAnalysisState {
+  symbol: string;
+  expiry: string;
+  strike: number;
+  interval: string;
+  isLive: boolean;
+  historicalDate: string;
+}
+
+interface FuturesOIAnalysisState {
+  symbol: string;
+  build: string;
+  interval: string;
+  isLive: boolean;
+  historicalDate: string;
+}
+
 
 const initialState: ChartState = {
   filters: {
@@ -246,7 +278,27 @@ const initialState: ChartState = {
     isLive: true,
     historicalDate: new Date().toISOString().split('T')[0],
   },
-  chartData,
+  futurePriceVsOIFilters: {
+    symbol: 'NIFTY',
+    expiry: '26/12/2024',
+    duration: '1D',
+    isLive: true,
+    historicalDate: new Date().toISOString().split('T')[0],
+  },
+  ivAnalysisFilters: {
+    symbol: 'NIFTY',
+    expiry: '06-Dec-2024',
+    strike: 25000,
+    interval: '5 Min',
+    isLive: true,
+    historicalDate: new Date().toISOString().split('T')[0],
+  },  futuresOIAnalysisFilters: {
+    symbol: 'All Symbols',
+    build: 'Full Data',
+    interval: 'Day',
+    isLive: true,
+    historicalDate: new Date().toISOString().split('T')[0],
+  },chartData,
   premiumDecayData,
   coiAnalysisData,
   trendingStrikesData,
@@ -254,10 +306,12 @@ const initialState: ChartState = {
   atmPremiumAnalysisData,
   straddleAnalysisData,
   multiStrikeStraddleData,
-  multiStrikeOIData,
-  oiGainerLooserData,
+  multiStrikeOIData,  oiGainerLooserData,
   longShortOptionsData,
   priceVsOIData,
+  futurePriceVsOIData,
+  ivAnalysisData,
+  futuresOIAnalysisData,
 };
 
 export const chartSlice = createSlice({
@@ -291,12 +345,20 @@ export const chartSlice = createSlice({
     },
     setLongShortFilters: (state, action: PayloadAction<Partial<LongShortState>>) => {
       state.longShortFilters = { ...state.longShortFilters, ...action.payload };
-    },
-    setPriceVsOIFilters: (state, action: PayloadAction<Partial<PriceVsOIState>>) => {
+    },    setPriceVsOIFilters: (state, action: PayloadAction<Partial<PriceVsOIState>>) => {
       state.priceVsOIFilters = { ...state.priceVsOIFilters, ...action.payload };
+    },
+    setFuturePriceVsOIFilters: (state, action: PayloadAction<Partial<FuturePriceVsOIState>>) => {
+      state.futurePriceVsOIFilters = { ...state.futurePriceVsOIFilters, ...action.payload };
+    },
+    setIVAnalysisFilters: (state, action: PayloadAction<Partial<IVAnalysisState>>) => {
+      state.ivAnalysisFilters = { ...state.ivAnalysisFilters, ...action.payload };
+    },
+    setFuturesOIAnalysisFilters: (state, action: PayloadAction<Partial<FuturesOIAnalysisState>>) => {
+      state.futuresOIAnalysisFilters = { ...state.futuresOIAnalysisFilters, ...action.payload };
     },
   },
 });
 
-export const { setFilters, setChartData, setPremiumDecayFilters, setCOIAnalysisFilters, setTrendingStrikesFilters, setPCRAnalysisFilters, setATMPremiumAnalysisFilters, setStraddleAnalysisFilters, setMultiStrikeStraddleFilters, setMultiStrikeOIFilters, setOIGainerLooserFilters, setLongShortFilters, setPriceVsOIFilters } = chartSlice.actions;
+export const { setFilters, setChartData, setPremiumDecayFilters, setCOIAnalysisFilters, setTrendingStrikesFilters, setPCRAnalysisFilters, setATMPremiumAnalysisFilters, setStraddleAnalysisFilters, setMultiStrikeStraddleFilters, setMultiStrikeOIFilters, setOIGainerLooserFilters, setLongShortFilters, setPriceVsOIFilters, setFuturePriceVsOIFilters, setIVAnalysisFilters, setFuturesOIAnalysisFilters } = chartSlice.actions;
 export default chartSlice.reducer;

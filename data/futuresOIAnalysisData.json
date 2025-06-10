@@ -1,0 +1,378 @@
+{
+  "symbols": ["All Symbols", "NIFTY", "BANKNIFTY", "FINNIFTY", "MIDCPNIFTY", "SENSEX", "BANKEX", "NIFTYIT", "NIFTYPHARMA"],
+  "builds": ["Full Data", "Long Build", "Short Build", "Long Unwinding", "Short Covering"],
+  "intervals": ["1 Min", "3 Min", "5 Min", "15 Min", "30 Min", "1 Hour", "Day"],
+  "currentTime": "15:30",
+  "lastUpdated": "2025-06-09 15:30:25",
+  "summary": {
+    "totalOI": 985640,
+    "totalVolume": 4268920,
+    "sentiment": "Bullish",
+    "topGainer": "BANKNIFTY",
+    "topLoser": "ICICIGI"
+  },
+  "data": [
+    {
+      "symbol": "BLUESTARCO",
+      "ltp": 1599.20,
+      "priceChange": 8.10,
+      "percentChange": 0.51,
+      "oi": 4336,
+      "oiChange": 10284,
+      "percentOiChange": 2.42,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "DIXON",
+      "ltp": 5032.50,
+      "priceChange": 44.60,
+      "percentChange": 2.8,
+      "oi": 5211,
+      "oiChange": 41854,
+      "percentOiChange": 8.03,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "FORTIS",
+      "ltp": 766.00,
+      "priceChange": 4.00,
+      "percentChange": 0.53,
+      "oi": 3649,
+      "oiChange": 46160,
+      "percentOiChange": 10.34,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "RHBHOUSING",
+      "ltp": 1111.00,
+      "priceChange": 37.00,
+      "percentChange": 3.33,
+      "oi": 7755,
+      "oiChange": 124462,
+      "percentOiChange": 16.05,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "HDFCBANK",
+      "ltp": 1099.00, 
+      "priceChange": 20.70,
+      "percentChange": 1.92,
+      "oi": 1353,
+      "oiChange": 22150,
+      "percentOiChange": 16.37,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "BAJFINANCE",
+      "ltp": 1993.80, 
+      "priceChange": 16.90,
+      "percentChange": 0.85,
+      "oi": 1707,
+      "oiChange": 23650,
+      "percentOiChange": 13.85,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "HCLTECH",
+      "ltp": 2366.00, 
+      "priceChange": 1.10,
+      "percentChange": 0.08,
+      "oi": 424,
+      "oiChange": 5450,
+      "percentOiChange": 12.85,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "ICICIBANK",
+      "ltp": 995.10, 
+      "priceChange": 20.40,
+      "percentChange": 2.05,
+      "oi": 1429,
+      "oiChange": 17900,
+      "percentOiChange": 12.52,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "BHARTIARTL",
+      "ltp": 1714.00, 
+      "priceChange": 75.00,
+      "percentChange": 4.38,
+      "oi": 4787,
+      "oiChange": 54025,
+      "percentOiChange": 11.28,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "KOTAKBANK",
+      "ltp": 2158.90, 
+      "priceChange": 21.30,
+      "percentChange": 0.99,
+      "oi": 587,
+      "oiChange": 6520,
+      "percentOiChange": 11.10,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "TATAMOTORS",
+      "ltp": 5678.00, 
+      "priceChange": 81.30,
+      "percentChange": 1.43,
+      "oi": 219,
+      "oiChange": 2432,
+      "percentOiChange": 11.10,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "INFY",
+      "ltp": 2096.20, 
+      "priceChange": 207.70,
+      "percentChange": 1.10,
+      "oi": 79,
+      "oiChange": 791,
+      "percentOiChange": 10.14,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "TCS",
+      "ltp": 1687.50, 
+      "priceChange": 41.10,
+      "percentChange": 2.49,
+      "oi": 129,
+      "oiChange": 12090,
+      "percentOiChange": 9.36,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "ltp": 1318.20, 
+      "priceChange": -202.40,
+      "percentChange": -1.54,
+      "oi": 234,
+      "oiChange": 2034,
+      "percentOiChange": 8.67,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "HINDALCO",
+      "ltp": 932.95, 
+      "priceChange": 3.45,
+      "percentChange": 0.37,
+      "oi": 940,
+      "oiChange": 8080,
+      "percentOiChange": 8.57,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "TATASTEEL",
+      "ltp": 2013.70, 
+      "priceChange": -14.30,
+      "percentChange": -0.71,
+      "oi": 707,
+      "oiChange": 5945,
+      "percentOiChange": 8.40,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "AXISBANK",
+      "ltp": 219.20, 
+      "priceChange": 10.30,
+      "percentChange": 4.70,
+      "oi": 7737,
+      "oiChange": 64794,
+      "percentOiChange": 8.37,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "HINDUNILVR",
+      "ltp": 168.86, 
+      "priceChange": 1.41,
+      "percentChange": 0.84,
+      "oi": 1939,
+      "oiChange": 14341,
+      "percentOiChange": 7.40,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "WIPRO",
+      "ltp": 233.00, 
+      "priceChange": 7.40,
+      "percentChange": 3.28,
+      "oi": 6282,
+      "oiChange": 46300,
+      "percentOiChange": 7.36,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "COALINDIA",
+      "ltp": 636.85, 
+      "priceChange": 2.30,
+      "percentChange": 0.37,
+      "oi": 8599,
+      "oiChange": 60800,
+      "percentOiChange": 7.07,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "IOC",
+      "ltp": 688.50, 
+      "priceChange": 33.90,
+      "percentChange": 4.93,
+      "oi": 3862,
+      "oiChange": 27245,
+      "percentOiChange": 7.05,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "AMBUJACEM",
+      "ltp": 454.00, 
+      "priceChange": 22.30,
+      "percentChange": 4.91,
+      "oi": 1097,
+      "oiChange": 7420,
+      "percentOiChange": 6.76,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "ULTRACEMCO",
+      "ltp": 239.40, 
+      "priceChange": 4.97,
+      "percentChange": 1.95,
+      "oi": 1195,
+      "oiChange": 8300,
+      "percentOiChange": 6.94,
+      "expiry": "26-06-25"
+    },
+    {
+      "symbol": "JSWSTEEL",
+      "ltp": 1619.90, 
+      "priceChange": -45.80,
+      "percentChange": -2.83,
+      "oi": 316,
+      "oiChange": 1940,
+      "percentOiChange": 6.14,
+      "expiry": "26-06-25"
+    }
+  ],
+  "chartData": [
+    {
+      "time": "9:15",
+      "totalOI": 750000,
+      "niftyFuture": 24840.25,
+      "bnfFuture": 48250.50
+    },
+    {
+      "time": "9:30",
+      "totalOI": 775000,
+      "niftyFuture": 24855.40,
+      "bnfFuture": 48265.75
+    },
+    {
+      "time": "9:45",
+      "totalOI": 795000,
+      "niftyFuture": 24842.15,
+      "bnfFuture": 48240.25
+    },
+    {
+      "time": "10:00",
+      "totalOI": 810000,
+      "niftyFuture": 24835.80,
+      "bnfFuture": 48232.60
+    },
+    {
+      "time": "10:15",
+      "totalOI": 825000,
+      "niftyFuture": 24828.30,
+      "bnfFuture": 48215.90
+    },
+    {
+      "time": "10:30",
+      "totalOI": 840000,
+      "niftyFuture": 24822.65,
+      "bnfFuture": 48205.45
+    },
+    {
+      "time": "10:45",
+      "totalOI": 852000,
+      "niftyFuture": 24815.90,
+      "bnfFuture": 48195.20
+    },
+    {
+      "time": "11:00",
+      "totalOI": 865000,
+      "niftyFuture": 24808.45,
+      "bnfFuture": 48180.35
+    },
+    {
+      "time": "11:15",
+      "totalOI": 878000,
+      "niftyFuture": 24815.30,
+      "bnfFuture": 48195.60
+    },
+    {
+      "time": "11:30",
+      "totalOI": 890000,
+      "niftyFuture": 24825.20,
+      "bnfFuture": 48210.45
+    },
+    {
+      "time": "11:45",
+      "totalOI": 905000,
+      "niftyFuture": 24838.75,
+      "bnfFuture": 48235.80
+    },
+    {
+      "time": "12:00",
+      "totalOI": 915000,
+      "niftyFuture": 24845.60,
+      "bnfFuture": 48252.70
+    },
+    {
+      "time": "12:15",
+      "totalOI": 928000,
+      "niftyFuture": 24852.90,
+      "bnfFuture": 48265.35
+    },
+    {
+      "time": "12:30",
+      "totalOI": 940000,
+      "niftyFuture": 24860.15,
+      "bnfFuture": 48278.90
+    },
+    {
+      "time": "12:45",
+      "totalOI": 952000,
+      "niftyFuture": 24868.35,
+      "bnfFuture": 48290.25
+    },
+    {
+      "time": "13:00",
+      "totalOI": 962000,
+      "niftyFuture": 24872.80,
+      "bnfFuture": 48305.60
+    },
+    {
+      "time": "13:15",
+      "totalOI": 972000,
+      "niftyFuture": 24875.65,
+      "bnfFuture": 48320.30
+    },
+    {
+      "time": "13:30",
+      "totalOI": 978000,
+      "niftyFuture": 24882.40,
+      "bnfFuture": 48332.15
+    },
+    {
+      "time": "13:45",
+      "totalOI": 982000,
+      "niftyFuture": 24890.25,
+      "bnfFuture": 48345.80
+    },
+    {
+      "time": "14:00",
+      "totalOI": 985640,
+      "niftyFuture": 24895.65,
+      "bnfFuture": 48356.40
+    }
+  ]
+}
