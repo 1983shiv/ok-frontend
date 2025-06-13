@@ -1,0 +1,62 @@
+{
+  "symbols": ["NIFTY", "BANKNIFTY", "FINNIFTY", "MIDCPNIFTY"],
+  "expiries": ["12-06-2025", "19-06-2025", "26-06-2025", "03-07-2025"],
+  "strikeCounts": [5, 10, 20, 30, 40, 50],
+  "durations": ["Last 15 Min", "Last 30 Min", "Last 60 Min", "Day", "Week", "Month"],
+  "changeInOI": {
+    "CE": [
+      { "strikePrice": 24000, "value": 1200000 },
+      { "strikePrice": 24150, "value": 900000 },
+      { "strikePrice": 24250, "value": 750000 },
+      { "strikePrice": 24350, "value": 600000 },
+      { "strikePrice": 24450, "value": 450000 },
+      { "strikePrice": 24550, "value": 300000 },
+      { "strikePrice": 24650, "value": 150000 },
+      { "strikePrice": 24750, "value": 0 },
+      { "strikePrice": 24850, "value": -150000 },
+      { "strikePrice": 24950, "value": -300000 }
+    ],
+    "PE": [
+      { "strikePrice": 24000, "value": -300000 },
+      { "strikePrice": 24150, "value": -150000 },
+      { "strikePrice": 24250, "value": 0 },
+      { "strikePrice": 24350, "value": 150000 },
+      { "strikePrice": 24450, "value": 300000 },
+      { "strikePrice": 24550, "value": 450000 },
+      { "strikePrice": 24650, "value": 600000 },
+      { "strikePrice": 24750, "value": 750000 },
+      { "strikePrice": 24850, "value": 900000 },
+      { "strikePrice": 24950, "value": 1200000 }
+    ]
+  },
+  "totalOI": {
+    "CE": 220300000,
+    "PE": 180500000
+  },
+  "strikeOI": {
+    "CE": [
+      { "strikePrice": 24000, "value": 5000000 },
+      { "strikePrice": 24150, "value": 4500000 },
+      { "strikePrice": 24250, "value": 4000000 },
+      { "strikePrice": 24350, "value": 3500000 },
+      { "strikePrice": 24450, "value": 3000000 },
+      { "strikePrice": 24550, "value": 2500000 },
+      { "strikePrice": 24650, "value": 2000000 },
+      { "strikePrice": 24750, "value": 1500000 },
+      { "strikePrice": 24850, "value": 1000000 },
+      { "strikePrice": 24950, "value": 500000 }
+    ],
+    "PE": [
+      { "strikePrice": 24000, "value": 500000 },
+      { "strikePrice": 24150, "value": 1000000 },
+      { "strikePrice": 24250, "value": 1500000 },
+      { "strikePrice": 24350, "value": 2000000 },
+      { "strikePrice": 24450, "value": 2500000 },
+      { "strikePrice": 24550, "value": 3000000 },
+      { "strikePrice": 24650, "value": 3500000 },
+      { "strikePrice": 24750, "value": 4000000 },
+      { "strikePrice": 24850, "value": 4500000 },
+      { "strikePrice": 24950, "value": 5000000 }
+    ]
+  }
+}

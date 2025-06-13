@@ -1,0 +1,169 @@
+{
+  "symbols": ["NIFTY", "BANKNIFTY", "FINNIFTY", "MIDCPNIFTY"],
+  "expiries": ["12-06-2025", "19-06-2025", "26-06-2025", "03-07-2025"],
+  "intervals": ["1 Min", "3 Min", "5 Min", "15 Min", "30 Min", "1 Hour"],
+  "ranges": ["Auto", "ITM 10", "ITM 5", "ATM ±5", "ATM ±10", "OTM 5", "OTM 10"],
+  "currentNiftyFuture": 24875.65,
+  "currentTime": "15:30",
+  "lastUpdated": "2025-06-12 15:30:25",
+  "summary": {
+    "totalChangeInOI": {
+      "call": 430.6,
+      "put": 498.3
+    },
+    "totalOI": {
+      "call": 220.3,
+      "put": 198.3
+    },
+    "oiDifference": 30000,
+    "maxPain": 24850,
+    "pcr": 1.157,
+    "sentiment": "Bearish"
+  },
+  "timeSeriesData": [
+    {
+      "time": "9:15",
+      "niftyFuture": 24840.25,
+      "changeInCallOI": 45000,
+      "changeInPutOI": 38000,
+      "totalCallOI": 380000,
+      "totalPutOI": 420000,
+      "oiDifference": -7000
+    },
+    {
+      "time": "9:30",
+      "niftyFuture": 24855.40,
+      "changeInCallOI": 52000,
+      "changeInPutOI": 43000,
+      "totalCallOI": 385000,
+      "totalPutOI": 425000,
+      "oiDifference": 9000
+    },
+    {
+      "time": "9:45",
+      "niftyFuture": 24842.15,
+      "changeInCallOI": 48000,
+      "changeInPutOI": 41000,
+      "totalCallOI": 390000,
+      "totalPutOI": 428000,
+      "oiDifference": 7000
+    },
+    {
+      "time": "10:00",
+      "niftyFuture": 24835.80,
+      "changeInCallOI": 43000,
+      "changeInPutOI": 47000,
+      "totalCallOI": 392000,
+      "totalPutOI": 432000,
+      "oiDifference": -4000
+    },
+    {
+      "time": "10:15",
+      "niftyFuture": 24828.30,
+      "changeInCallOI": 38000,
+      "changeInPutOI": 51000,
+      "totalCallOI": 395000,
+      "totalPutOI": 438000,
+      "oiDifference": -13000
+    },
+    {
+      "time": "10:30",
+      "niftyFuture": 24822.65,
+      "changeInCallOI": 35000,
+      "changeInPutOI": 55000,
+      "totalCallOI": 398000,
+      "totalPutOI": 445000,
+      "oiDifference": -20000
+    },
+    {
+      "time": "11:00",
+      "niftyFuture": 24815.90,
+      "changeInCallOI": 31000,
+      "changeInPutOI": 58000,
+      "totalCallOI": 402000,
+      "totalPutOI": 452000,
+      "oiDifference": -27000
+    },
+    {
+      "time": "11:30",
+      "niftyFuture": 24808.45,
+      "changeInCallOI": 28000,
+      "changeInPutOI": 62000,
+      "totalCallOI": 405000,
+      "totalPutOI": 458000,
+      "oiDifference": -34000
+    },
+    {
+      "time": "12:00",
+      "niftyFuture": 24825.20,
+      "changeInCallOI": 35000,
+      "changeInPutOI": 58000,
+      "totalCallOI": 408000,
+      "totalPutOI": 462000,
+      "oiDifference": -23000
+    },
+    {
+      "time": "12:30",
+      "niftyFuture": 24838.75,
+      "changeInCallOI": 42000,
+      "changeInPutOI": 53000,
+      "totalCallOI": 412000,
+      "totalPutOI": 465000,
+      "oiDifference": -11000
+    },
+    {
+      "time": "13:00",
+      "niftyFuture": 24845.60,
+      "changeInCallOI": 46000,
+      "changeInPutOI": 48000,
+      "totalCallOI": 415000,
+      "totalPutOI": 468000,
+      "oiDifference": -2000
+    },
+    {
+      "time": "13:30",
+      "niftyFuture": 24852.90,
+      "changeInCallOI": 50000,
+      "changeInPutOI": 45000,
+      "totalCallOI": 418000,
+      "totalPutOI": 470000,
+      "oiDifference": 5000
+    },
+    {
+      "time": "14:00",
+      "niftyFuture": 24860.15,
+      "changeInCallOI": 54000,
+      "changeInPutOI": 42000,
+      "totalCallOI": 422000,
+      "totalPutOI": 472000,
+      "oiDifference": 12000
+    },
+    {
+      "time": "14:30",
+      "niftyFuture": 24868.35,
+      "changeInCallOI": 58000,
+      "changeInPutOI": 38000,
+      "totalCallOI": 425000,
+      "totalPutOI": 474000,
+      "oiDifference": 20000
+    },
+    {
+      "time": "15:00",
+      "niftyFuture": 24872.80,
+      "changeInCallOI": 61000,
+      "changeInPutOI": 35000,
+      "totalCallOI": 428000,
+      "totalPutOI": 476000,
+      "oiDifference": 26000
+    },
+    {
+      "time": "15:30",
+      "niftyFuture": 24875.65,
+      "changeInCallOI": 63000,
+      "changeInPutOI": 33000,
+      "totalCallOI": 430600,
+      "totalPutOI": 498300,
+      "oiDifference": 30000
+    }
+  ]
+}
